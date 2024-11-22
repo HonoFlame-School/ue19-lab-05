@@ -38,7 +38,7 @@ jobs:
     - name: Scan Docker image for vulnerabilities
       uses: aquasecurity/trivy-action@0.29.0  # Utilisation de la version v0.29.0
       with:
-        image-ref: ghcr.io/${{ github.repository_owner }}/jokesapp:latest
+        image-ref: ghcr.io/honoflame-school/jokesapp:latest
 
     # 7. Pousser l'image vers GitHub Container Registry
     - name: Push Docker image to GitHub Container Registry
