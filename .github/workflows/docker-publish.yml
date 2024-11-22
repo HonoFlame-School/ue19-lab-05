@@ -22,7 +22,7 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
-      # 3. Construire l'image Docker
+    # 3. Construire l'image Docker
     - name: Build Docker image
       run: docker build -t ghcr.io/${{ github.repository_owner }}/jokesapp:latest .
 
