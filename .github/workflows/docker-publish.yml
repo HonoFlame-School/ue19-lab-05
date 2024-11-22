@@ -28,7 +28,7 @@ jobs:
 
     # 4. Scanner l'image Docker avec Trivy
     - name: Scan Docker image for vulnerabilities
-      uses: aquasecurity/trivy-action@v0.29.0
+      uses: aquasecurity/trivy-action@v0.28.0
       with:
         image: ghcr.io/honoflame-school/jokesapp:latest
 
