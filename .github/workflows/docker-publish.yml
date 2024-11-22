@@ -26,6 +26,12 @@ jobs:
     - name: Build Docker image
       run: docker build -t ghcr.io/honoflame-school/jokesapp:latest .
 
-      # 4. Pousser l'image vers GitHub Container Registry
+    # 4. Scanner l'image Docker avec Trivy
+    - name: Scan Docker image for vulnerabilities
+      uses: aquasecurity/trivy-action@v0.3.0
+      with:
+        image: ghcr.io/honoflame-school/jokesapp:latest
+
+    # 5. Pousser l'image vers GitHub Container Registry
     - name: Push Docker image to GitHub Container Registry
       run: docker push ghcr.io/honoflame-school/jokesapp:latest
